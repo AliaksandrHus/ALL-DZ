@@ -83,3 +83,24 @@ try:
 except ValueError:
     print(f'\nERROR: недопустимый символ в строке ввода!\nА число было {rand_num}')
 
+
+# 5. Сделать программу в которой нужно угадать число.
+
+maximum = 10
+rand_num = random.randint(1, maximum)
+
+player = input(f'Угадайте число от 1 до {maximum}: ')
+while not player.isdigit(): print('Только цифры! Повторите ввод:', end=' '); player = input()
+
+count = 1
+
+while rand_num != int(player):
+
+    if int(player) < rand_num: print('Больше!')
+    else: print('Меньше!')
+    player = input(f'Угадайте число от 1 до {maximum}: ')
+    while not player.isdigit(): print('Только цифры! Повторите ввод:', end=' '); player = input()
+    count += 1
+
+print(f'\nУгадал с {count} попытки! число {player}')
+
