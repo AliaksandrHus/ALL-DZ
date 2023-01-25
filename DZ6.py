@@ -62,7 +62,7 @@ with open('temp.json', 'r') as file_j:
 
 with open('temp.csv', 'w') as file_c:
     writer = csv.writer(file_c)
-    writer.writerow(['NUM', 'ID', 'NAME', 'AGE', 'PHONE'])
+    writer.writerow([' ', 'ID', 'NAME', 'AGE', 'PHONE'])
 
     for line in data:
         writer.writerow(line)
@@ -81,7 +81,7 @@ with open('temp.csv', 'r') as file_c:
     data_l = csv.reader(file_c)
     data_s = dict()
 
-    for x in data_l: data_s['' if x[0] == 'NUM' else 'Person ' + x[0][-1]] = x[1:3] + x[-1:]
+    for x in data_l: data_s['' if x[0] == ' ' else 'Person ' + x[0][-1]] = x[1:3] + x[-1:]
 
 data = pandas.DataFrame(data_s)
-data.to_excel('temp.xlsx')
+data.to_excel('temp.xlsx', index=False)
