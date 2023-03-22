@@ -1,3 +1,7 @@
+# 1 Создать Flask приложение для регистрации на мероприятие
+# 2 Подключить БД
+# 3 Использовать SQLAlchemy
+
 from flask import Flask, render_template, request
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.orm import Session, DeclarativeBase
