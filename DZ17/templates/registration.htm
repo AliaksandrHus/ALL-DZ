@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Регистрация</title>
+ </head>
+
+ <style>
+.center { text-align: center;}
+</style>
+
+  <body>
+  <h1 class = "center">БРЕДОВОЕ ПОПОИЩЕ</h1>
+  <div class = "center">
+  <form action="page1" target="_blank">
+   <button onclick="document.location='/'">● Мероприятие ●</button>
+      <button onclick="document.location='/people'">● Участники ●</button>
+        <button onclick="document.location='/registration'">▾ Регистрация ▾</button>
+  </form>
+      <p>Регистрация на мероприятие:</p>
+      <form action="/registration" method="post">
+<input class="name" name="name" placeholder="Введите ваше имя" />
+<input class="email" name="email" placeholder="Введите ваш e-mail" />
+<input type="submit" value="Зарегистрироваться" />
+</form>
+      <p>*Организаторы не несут ответственности за несчастные случаи</p>
+   </div>
+ </body>
+</html>
