@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Studentiki</title>
+ </head>
+
+ <style>
+.center { text-align: center;}
+</style>
+
+  <body>
+  <h1 class = "center">БАЗА СТУДЕНТИКОВ</h1>
+  <div class = "center">
+  <form action="page1" target="_blank">
+   <button onclick="document.location='/first'">●  Главная страница  ●</button>
+      <button onclick="document.location='/first/students'">● Список студентиков ●</button>
+        <button onclick="document.location='/first/add'">▾  Добавить ученика  ▾</button>
+  </form>
+      <p>Администрация очень рада видеть вас на этой странице!</p>
+      <p>Добавить студентика</p>
+          <form action="/first/add" method="post">{% csrf_token %}
+        <p>
+            <input type="text" name="name" placeholder="ФИО студента" size="33"/>
+            <input type="text" name="group_id" placeholder="Группа студента" size="33"/>
+        </p>
+              <p>
+                            <label>
+      <input type="radio" name="sex" value="М">
+      Мужской
+      <input type="radio" name="sex" value="Ж">
+      Женский
+    </label>
+              </p>
+              <p>
+            <label>Характеристика</label><br>
+            <input type="text" name="description" size="69"/>
+        </p>
+        <input type="submit" value="Сохранить" >
+    </form>
+   </div>
+ </body>
+</html>

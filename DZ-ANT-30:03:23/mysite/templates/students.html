@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Studentiki</title>
+ </head>
+
+ <style>
+.center { text-align: center;}
+</style>
+
+  <body>
+  <h1 class = "center">БАЗА СТУДЕНТИКОВ</h1>
+  <div class = "center">
+  <form action="page1" target="_blank">
+   <button onclick="document.location='/first'">●  Главная страница  ●</button>
+      <button onclick="document.location='/first/students'">▾ Список студентиков ▾</button>
+        <button onclick="document.location='/first/add'">●  Добавить ученика  ●</button>
+  </form>
+      <p>Список студентиков</p>
+      {% for item in all_s %}
+    <p><a href="{% url 'students_show' item.id %}">{{item.name}}</a></p>
+{% endfor %}
+
+
+   </div>
+ </body>
+</html>
