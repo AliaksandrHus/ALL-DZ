@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template.response import TemplateResponse
 from .models import Students
+from .forms import UserForm
+from .models import UserForm as UF
 
 
 def index(request):
@@ -24,6 +26,24 @@ def students(request):
 def add(request):
 
     if request.method == "POST":
+
+        print(request.POST)
+
+        if len(request.POST) == 3:
+
+
+            per = UF()
+            per.name = request.POST.get('name')
+            per.how = request.POST.get('how')
+            per.save()
+
+            template = 'add_fin.html'
+            userform = UserForm()
+            all_p = UF.objects.all()
+
+            return render(request, template, {"form": userform, "all_p": all_p})
+
+
         if len(request.POST) == 5:
 
             person = Students()
@@ -34,11 +54,16 @@ def add(request):
             person.save()
 
             template = 'add_fin.html'
-            return TemplateResponse(request, template)
+            userform = UserForm()
+            all_p = UF.objects.all()
+
+            return render(request, template, {"form": userform, "all_p": all_p})
 
         else:
             template = 'add_error.html'
-            return TemplateResponse(request, template)
+            return render(request, template)
+
+
 
     template = 'add.html'
     return TemplateResponse(request, template)
@@ -48,3 +73,5 @@ def show(request, id):
     template = 'show.html'
     all_s = Students.objects.get(id=id)
     return render(request, template, {"all_s": all_s})
+
+

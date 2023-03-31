@@ -8,3 +8,8 @@ class Students(models.Model):
     group_id = models.TextField()
     description = models.TextField()
 
+
+class UserForm(models.Model):
+
+    name = models.TextField()
+    how = models.IntegerField()

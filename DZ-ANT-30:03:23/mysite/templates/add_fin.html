@@ -16,7 +16,19 @@
    <button onclick="document.location='/first'">●  Главная страница  ●</button>
       <button onclick="document.location='/first/students'">● Список студентиков ●</button>
         <button onclick="document.location='/first/add'">●  Добавить ученика  ●</button>
+  </form>
       <p>Данные внесены!</p>
-  </div>
+      <p>Записывайтесь на получение пирожков:</p>
+  <form method="post">{% csrf_token %}
+        {{ form }}
+      <input type="submit" value="Send" >
+  </form>
+
+      <p>Очередь за пирожками:</p>
+      {% for item in all_p %}
+    <p>ФИО: {{item.name}} / Количество пирожков: {{ item.how }}</p>
+{% endfor %}
+
+      </div>
  </body>
 </html>
