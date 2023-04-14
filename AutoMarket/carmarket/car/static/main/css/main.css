@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+@import url('https://fonts.cdnfonts.com/css/cinematografica');
+
+
+/* Меню */
+.menu {
+    padding: 20px; /* Поля вокруг текста */
+    background: RGB(30, 30, 30); /* Цвет фона */
+    text-align: center; /* Положение текста */
+}
+
+/* Меню текст*/
+.menu A {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    text-decoration: none; /* Декорация текста */
+    margin: 0 50px 0 50px; /* Отступы пунктов меню */
+    color: #fff; /* Цвет текста меню */
+    position: relative;
+    left: 5px;
+}
+
+
+/* Стиль активного класса и кнопки при наведении курсора мыши */
+.menu A:hover {
+  color: RGB(0, 157, 224);
+}
+
+
+.content H1 {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    text-align: center; /* Положение текста */
+    margin-left: 25%; /* Отступ слева в пикселах */
+    margin-right: 25%; /* Отступ слева в пикселах */
+}
+
+.content H3 {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    text-align: center; /* Положение текста */
+    margin-left: 25%; /* Отступ слева в пикселах */
+    margin-right: 25%; /* Отступ слева в пикселах */
+}
+
+.content P {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    text-align: center; /* Положение текста */
+    margin-left: 25%; /* Отступ слева в пикселах */
+    margin-right: 25%; /* Отступ слева в пикселах */
+
+}
+
+.content A {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    text-align: center; /* Положение текста */
+
+    color: RGB(0, 157, 224);
+
+
+}
+
+.content img {
+    width: 50%;
+    text-align: center; /* Положение текста */
+    margin-left: 25%; /* Отступ слева в пикселах */
+    margin-right: 25%; /* Отступ слева в пикселах */
+}
+
+.car H3 {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    margin-left: 50%; /* Отступ слева в пикселах */
+    margin-right: 25%; /* Отступ слева в пикселах */
+
+}
+
+
+.car P {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    margin-left: 50%; /* Отступ слева в пикселах */
+    margin-right: 25%; /* Отступ слева в пикселах */
+
+
+}
+
+.car img {
+    float: left;
+    width: 210px;
+    margin-left: 35%;
+    margin-right: 10px; /* Отступ слева в пикселах */
+
+}
+
+.car span {
+    color: gray;
+
+}
+
+.car A {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    text-decoration: none;
+    color: RGB(0, 157, 224);
+
+}
+
+.deteil img {
+    display: block;
+    width: 300px;
+    margin-left: auto; /* Отступ слева в пикселах */
+    margin-right: auto; /* Отступ слева в пикселах */
+}
+
+
+.content span {
+    color: gray;
+}
+
+

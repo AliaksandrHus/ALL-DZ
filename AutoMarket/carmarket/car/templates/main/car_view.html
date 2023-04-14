@@ -1,0 +1,33 @@
+{% extends 'main/icon.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="content">
+
+        <h1>{{ car.platform }}</h1>
+    </div>
+
+    <div class="deteil">
+        <img src="media/{{ car.photo }}"/>
+    </div>
+
+    <div class="content">
+        <p><span>Производитель: </span>{{ car.manufacturer }}<br>
+        <span>Годы производства: </span>{{ car.years_of_production }}<br>
+        <span>Тип кузова: </span>{{ car.body_type }}<br>
+        <span>Платформа: </span>{{ car.platform }}<br>
+        <span>Компоновка: </span>{{ car.layout }}<br><br>
+        <span>Ссылка на вики:</span><br>
+        <a href="{{ car.link }}">{{ car.link }}</a><br><br>
+        <span>Описание:</span><br>
+        {{ car.description }}</p>
+
+
+
+
+    </div>
+
+
+{% endblock %}
