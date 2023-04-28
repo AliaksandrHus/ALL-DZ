@@ -46,3 +46,23 @@ Postman JWT refresh токен:
 ![JWT-refresh.jpg](screenshots%2FJWT-refresh.jpg)
 
 ![Postman5.jpg](screenshots%2FPostman5.jpg)
+
+email создаем юзера:
+
+![email1.jpg](screenshots%2Femail1.jpg)
+
+email получаем письмо:
+
+![email2.jpg](screenshots%2Femail2.jpg)
+
+email вставляем токен из письма:
+
+![email3.jpg](screenshots%2Femail3.jpg)
+
+email получаем токен для авторизации:
+
+![email4.jpg](screenshots%2Femail4.jpg)
+
+email авторизация через токен:
+
+![email5.jpg](screenshots%2Femail5.jpg)
